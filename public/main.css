@@ -1,0 +1,45 @@
+body {
+  background-image: url("assets/windows_background.jpg") ;
+}
+#welcome_message {
+  background-color: gray;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+#hall_of_fame {
+margin-left: 28%;
+margin-right: 10%;
+margin-bottom:2%;
+}
+
+#play_game {
+margin-bottom:2%;
+}
+
+#msg {
+  background-color: gray;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+}
+
+.popUp {
+
+}
+
+#hof_form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  background-color: gray;
+}
