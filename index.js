@@ -1,3 +1,5 @@
+console.log("I am on the server")
+
 const bodyParser = require('body-parser')
 const express = require('express')
 const mongoose = require('mongoose')
@@ -30,8 +32,10 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/', function (req, res) {
-  res.send("game-page.html");
+  res.render("game-page");
 });
+
+
 
 
 app.listen(3000, function () {

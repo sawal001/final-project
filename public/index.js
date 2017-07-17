@@ -1,9 +1,9 @@
-const express = require('express')
+console.log("I am on the front end")
 
 //I will need this later when I start building out the hall of fame
 //const Post = require('../models/posts.js')
 
-const appRouter = express.Router()
+
 
 //player selects "play game" on the Welcome page--> this happens on welcome.html
 
@@ -13,11 +13,13 @@ const appRouter = express.Router()
 
 //Upon game page loading "Ready Set Go!" displays on the screen for three seconds
 
-function dissapear(){
-document.getElementByID("msg")
-setTimeOut(3000)
 
-}
+
+
+
+
+let  kjhkjhjhiuhiuhiuhiuh = document.getElementById("one")//.src="../views/layouts/game-page.handlebars";
+  kjhkjhjhiuhiuhiuhiuh.style.color="red"
 
 //round 1 (3 seconds apart)
 
@@ -92,5 +94,3 @@ setTimeOut(3000)
 
 
 //Real game logic =:0
-
-module.exports = postsRouter
