@@ -18,8 +18,8 @@ console.log("I am on the front end")
 
 
 
-let  kjhkjhjhiuhiuhiuhiuh = document.getElementById("one")//.src="../views/layouts/game-page.handlebars";
-  kjhkjhjhiuhiuhiuhiuh.style.color="red"
+let  randomVariableThatIHaveNeverUsedBeforeInMyLife = document.getElementById("one")
+  randomVariableThatIHaveNeverUsedBeforeInMyLife.style.color="red"
 
 //round 1 (3 seconds apart)
 
