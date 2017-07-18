@@ -17,13 +17,43 @@ console.log("I am on the front end")
 
 
 
+window.onload = function() {
+  let change = document.getElementById("msg");
 
-let  randomVariableThatIHaveNeverUsedBeforeInMyLife = document.getElementById("one")
-  randomVariableThatIHaveNeverUsedBeforeInMyLife.style.color="red"
+
+
+  setTimeout(function(){
+   change.style.display = 'none';
+}, 3000);
+
+
+/*
+if (document.getElementById('msg').style.display = 'none'){
+  document.getElementById('one').style.display = ''
+}
+  */
+
+
+var x = document.getElementById("one")
+var y = document.getElementById('two')
+
+console.log(x)
+
+x.addEventListener('click', function() {
+  if (x.style.display("") == x.innerHTML) {
+    y.innerHTML = y.style.display("");
+  }
+
+  console.log("does this work?")
+});
+
 
 //round 1 (3 seconds apart)
 
 //pop up number 1 should appear after three seconds
+
+
+
 
   //if the user clicks the popup move on to next popup
   //if not show "GAME OVER" page
@@ -90,7 +120,7 @@ let  randomVariableThatIHaveNeverUsedBeforeInMyLife = document.getElementById("o
   //if not show "GAME OVER" page
 
 //If user completes this round show "YOU WON" message which has option to play again or enter your name in the hall of fame
-
+}
 
 
 //Real game logic =:0
