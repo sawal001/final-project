@@ -1,127 +1,37 @@
 console.log("I am on the front end")
 
-//I will need this later when I start building out the hall of fame
-//const Post = require('../models/posts.js')
+/*
 
+  We can use the `window.location` object to know where we are. This object contains valuable information about the current username, including the pathname at `window.location.pathname`, and is a way for us to change the current url using `window.location.replace()`.
 
+  Here, I've provided a sample for you. You can get the current location using `window.location.pathname`. Then, we can test against that pathname. For instance, if the current path is `/game`, then we'll set a time to call a function in 3 seconds. That function well send the user to the first level of our game using `window.location.replace()`. Check the server in `index.js` to see how the levels route works!
 
-//player selects "play game" on the Welcome page--> this happens on welcome.html
-
-
-//player is taken to the game page aka game-page.html
-
-
-//Upon game page loading "Ready Set Go!" displays on the screen for three seconds
-
-
-
-
+ */
 
 window.onload = function() {
-  let change = document.getElementById("msg");
 
+  // This gets the current page
+  let currentPath = window.location.pathname
 
-
-  setTimeout(function(){
-   change.style.display = 'none';
-}, 3000);
-
-
-/*
-if (document.getElementById('msg').style.display = 'none'){
-  document.getElementById('one').style.display = ''
-}
-  */
-
-
-var x = document.getElementById("one")
-var y = document.getElementById('two')
-
-
-
-console.log(x)
-
-x.addEventListener('click', function() {
-  if (x.style.display="")  {
-    y.innerHTML = y.style.display = 'none' //&& x.style.display= 'none';
+  /*
+    If the path for the current page is '/game' (i.e. we're on the game landing page), then we'll set a timer for 3 seconds and send the user to the first level ('/levels/one') when that timer ends.
+   */
+  if ( currentPath === '/game' ) {
+    setTimeout(function(){
+      window.location.replace('/levels/one')
+    }, 3000)
   }
 
-})
+  /*
+    Next Steps:
+
+    If the current path is one of our levels, then we'll want to do 2 things:
+
+    1. Create a timer for some amount of time (up to you) that will send the user to the game-over page. If this function is called, then the user did not click the pop up in time and so, has lost! The game over page is at http://localhost:300/game-over
+
+    2. Add an event listener to the div. If the player clicks the div, then we should navigate them to the next level. This will automatically kill our timer.
+
+   */
 
 
-//round 1 (3 seconds apart)
-
-//pop up number 1 should appear after three seconds
-
-
-
-
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//pop up number 2 should appear after six seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//pop up number 3 should appear after nine seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//pop up number 4 should appear after twelve seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//pop up number 5 should appear after fifteen seconds
-
-
-
-//round 2 (2 seconds apart)
-
-//pop up number 6 should appear after 17 seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//pop up number 7 should appear after 19 seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//pop up number 8 should appear after 21 seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//pop up number 9 should appear after 23 seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//pop up number 10 should appear after 25 seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-
-//round 3 (1 second apart)
-
-//pop up number 11 should appear after 26 seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//pop up number 12 should appear after 27 seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//pop up number 13 should appear after 28 seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//pop up number 14 should appear after 29 seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//pop up number 15 should appear after 30 seconds
-  //if the user clicks the popup move on to next popup
-  //if not show "GAME OVER" page
-
-//If user completes this round show "YOU WON" message which has option to play again or enter your name in the hall of fame
 }
-
-
-//Real game logic =:0
