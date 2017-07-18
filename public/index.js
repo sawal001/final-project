@@ -37,15 +37,16 @@ if (document.getElementById('msg').style.display = 'none'){
 var x = document.getElementById("one")
 var y = document.getElementById('two')
 
+
+
 console.log(x)
 
 x.addEventListener('click', function() {
-  if (x.style.display("") == x.innerHTML) {
-    y.innerHTML = y.style.display("");
+  if (x.style.display="")  {
+    y.innerHTML = y.style.display = 'none' //&& x.style.display= 'none';
   }
 
-  console.log("does this work?")
-});
+})
 
 
 //round 1 (3 seconds apart)
