@@ -31,9 +31,32 @@ app.use(express.static('public'))
 // Use Body Parser
 app.use(bodyParser.urlencoded({extended: true}))
 
+/*
+  This route renders our home page, where a user can elect to see the hall of fame or play the game
+ */
 app.get('/', function (req, res) {
-  res.render("game-page");
+  res.render("welcome");
 });
+
+/*
+  This route will render our get-ready screen and navigate the user to the first level after 3 seconds.
+ */
+app.get('/game', (req, res ) => {
+  res.render('game-page')
+})
+
+app.get('game-over', (req, res) => {
+  res.render('game-over')
+})
+
+/*
+  This route will render all the levels of our game. The url for any level of our game will be: http://localhost:3000/levels/someLevel. This will match against this route where the parameter :level will contain the current level (one, two, three, etc). We can then use that to look up which handlebars template we should render. So if we're at level one (http://localhost:3000/levels/one), then the value of :level will be the strin 'one' and so we'll render the view at /views/levels/one.handlebars.
+ */
+app.get('/levels/:level', (req, res ) => {
+  let currentLevel = req.params.level
+  res.render(`levels/${currentLevel}`)
+})
+
 
 
 
